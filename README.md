@@ -59,7 +59,7 @@ Below are the evaluation results of the models implemented so far. When validati
 
 <div align="center">
   <h2><b>AP-10K</b></h2>
-  <video src="images_videos/videos/Multi-Species_AnimalPoseEstimation_YOLO11l_AP-10K.gif" style="width: 800px;">
+  <img src="images_videos/videos/Multi-Species_AnimalPoseEstimation_YOLO11l_AP-10K.gif" style="width: 600px;">
 </div>
 
 ---
