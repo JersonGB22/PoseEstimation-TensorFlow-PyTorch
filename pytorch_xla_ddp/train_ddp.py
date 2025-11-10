@@ -464,10 +464,11 @@ class DDPTrainer():
         results = self.run_epoch(loader, self.args.eval_set, training=False)
         
         # Saves the evaluation results
-        pd.DataFrame([results]).to_csv(
-            os.path.join(self.args.ckpt_dir, f"{self.args.eval_set}_results_{self.args.world_size}d.csv"), 
-            index=False
-        )
+        if self.rank == 0:
+            pd.DataFrame([results]).to_csv(
+                os.path.join(self.args.ckpt_dir, f"{self.args.eval_set}_results_{self.args.world_size}d.csv"),
+                index=False
+            )
 
     def predict(self) -> None:
         """
