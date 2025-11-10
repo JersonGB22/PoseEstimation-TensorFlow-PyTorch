@@ -27,12 +27,12 @@ Pose estimation has become a cornerstone in multiple domains, including:
 
 ## **Implemented Models**
 
-All projects leverage **transfer learning**, fine-tuning pretrained models on large-scale datasets with frameworks such as [TensorFlow](https://www.tensorflow.org/api_docs), [PyTorch](https://pytorch.org/docs/stable/index.html), and [Ultralytics](https://docs.ultralytics.com/).
+All projects leverage **transfer learning**, fine-tuning pretrained models on large-scale datasets with frameworks such as [TensorFlow](https://www.tensorflow.org/api_docs), [PyTorch](https://pytorch.org/docs/stable/index.html) (including its [PyTorch/XLA](https://github.com/pytorch/xla) backend), and [Ultralytics](https://docs.ultralytics.com/).
 
 * **Basic models** were fine-tuned on single-class datasets with one instance per image, following a bottom-up, heatmap-based approach.
 * **Advanced models (YOLO11-pose)**, designed for real-time applications, were trained on multi-class, multi-instance datasets.
 
-Training is carried out in **Google Colab** using **TPUs** or **GPUs**, depending on project requirements.
+Training leverages **Google Colab** and **Kaggle** platforms, scaling from **single-GPU** setups to distributed training on **multi-GPU** and **multi-core TPU** systems. This is achieved using the native distributed strategies of **TensorFlow** and **PyTorch**, ensuring scalability and efficient resource utilization.
 
 All notebooks incorporate **data augmentation** to improve generalization, either manually with [Albumentations](https://albumentations.ai/docs/) or automatically (e.g., in **YOLO11-pose**). Additionally, **callbacks** and **learning rate schedulers** are used to prevent overfitting and enhance performance.
 
